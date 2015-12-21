@@ -1,0 +1,11 @@
+.active{
+            height: 50px;
+            width: 100px;
+            margin: 10px;
+            background-color: greenyellow;
+        }
+.mute{
+            height: 50px;
+            width: 100px;
+            margin: 10px;
+            background-color: dimgray;
