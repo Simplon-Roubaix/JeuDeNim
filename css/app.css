@@ -3,12 +3,14 @@
             width: 100px;
             margin: 10px;
             background-color: greenyellow;
+            color: black;
         }
 .mute{
             height: 50px;
             width: 100px;
             margin: 10px;
             background-color: dimgray;
+            color: yellow;
 #rowA #rowB #rowC #rowD {
         background-color: aqua;
     }

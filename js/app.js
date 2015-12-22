@@ -1,27 +1,58 @@
 $(document).foundation();
 
 // les variables:
-var partie = 0 ;
+var partie = 0, name1,name2,n=1,compte=3;
 
 // 1 : recuperation des elements du DOM
 var cibleEl = document.getElementById("cible");
 var clicCommencer = document.getElementById("commencer");
+// Boutons ??
+var clic1Button = document.getElementById("clic1");
+var clic2Button = document.getElementById("clic2");
 alert(partie);
 
 // 2 : les fonctions
 // fonction pour changer l'objet choisi
 function jeuDeNim(event) {
-     
-        //this.style.backgroundColor = 'black';
-        this.src = "img/allumette-brulee.png";
     
+    //Quel est le joueur?
+    partie --;
+    while (partie > 1) {
+        //Allumette utilisée 
+        this.src = "img/allumette-brulee.png";
+        if (n===1) {
+            //demander le nom du premier joueur
+            if (!name1) {
+                    name1 =  prompt("Veuillez entrer votre prénom Joueur1?");
+                    clic1Button.textContent = name1;
+            }
+            // 3 choix:
+            do {
+
+                compte--;
+            } while (compte<=1 || true)
+        } 
+        
+        
+        else {
+            //demander le nom du second joueur
+            if (!name2) {
+                    name2 =  prompt("Veuillez entrer votre prénom Joueur2?");
+                    clic2Button.textContent = name2;
+            }
+            //
+        }
+    
+    //this.style.backgroundColor = 'black';
+    }
+    document.getElementById(rJeu).innerHTML = "Vous avez perdu!";
 }
 
 
 
 
 function onclickCommencer(){
-    partie = 1;
+    partie = 16;
     alert(partie);
     document.getElementById("b0").onclick = jeuDeNim;
     document.getElementById("b1").onclick = jeuDeNim;
