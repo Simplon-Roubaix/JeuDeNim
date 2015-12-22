@@ -18,16 +18,17 @@ function jeuDeNim(event) {
     
     //Quel est le joueur?
     partie --;
-    if (partie > 1) {
+    if (partie > 0) {
         //Allumette utilisée 
         this.src = "img/allumette-brulee.png";
+        //Quel est le joueur?
         if (n===1) {
             //demander le nom du premier joueur
             if (!name1) {
                     name1 =  prompt("Veuillez entrer votre prénom Joueur1?");
                     clic1Button.textContent = name1;
             }
-            // 3 choix:
+            // 3 choix max et on change d'utilisateur:
             compte--;
             console.log(compte);
             if (compte===0) {
@@ -45,7 +46,7 @@ function jeuDeNim(event) {
                     name2 =  prompt("Veuillez entrer votre prénom Joueur2?");
                     clic2Button.textContent = name2;
             }
-            // 3 choix:
+            // 3 choix max et on change d'utilisateur
             compte--;
             console.log(compte);
             if (compte===0) {
@@ -59,7 +60,7 @@ function jeuDeNim(event) {
     //this.style.backgroundColor = 'black';
     }
     else {
-        rJeuEl.innerHTML = "Vous avez perdu!";
+        rJeuEl.textContent = "Vous avez perdu " +n; 
     }
 }
 
@@ -68,7 +69,7 @@ function jeuDeNim(event) {
 
 function onclickCommencer(){
     partie = 16;
-    alert(partie);
+    console.log(partie);
     document.getElementById("b0").onclick = jeuDeNim;
     document.getElementById("b1").onclick = jeuDeNim;
     document.getElementById("b2").onclick = jeuDeNim;
@@ -85,6 +86,8 @@ function onclickCommencer(){
     document.getElementById("b13").onclick = jeuDeNim;
     document.getElementById("b14").onclick = jeuDeNim;
     document.getElementById("b15").onclick = jeuDeNim;
+    document.getElementById("clic1Button").onclick = jeuDeNim;
+    document.getElementById("clic2Button").onclick = jeuDeNim;
 }
 
 // 3 : addEvent
