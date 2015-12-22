@@ -10,10 +10,10 @@
   </head>
   <body>
     <section id="jeudenim">
-            <div class=" columns row">
+            <div class="expanded columns row">
               
-                <h1>Jeu de Nim</h1>
-              <img src="img/baton.png" alt="">
+                <h1><img src="img/baton.png" alt=""> Jeu de Nim
+              <img src="img/baton.png" alt=""></h1>
             </div>
 
             <div class="row">
@@ -23,7 +23,7 @@
                     <p> <span id="clic1" class="button active">Joueur 1</span>
                         <span id="clic2" class="button mute ">Joueur 2</span>
                     </p>
-                    <img src="img/nim___01.jpg" alt="">
+                   <!-- <img src="img/nim___01.jpg" alt="">-->
                     <div class="callout">
                     <h3>Les règles du jeu</h3>
                     <p>Ne terminez pas avec le dernier baton</p>
@@ -32,137 +32,71 @@
                 </div>
                 <div id="cible" class="small-7 medium-7 columns">
                     <h5>Cliquez sur commencer pour démarrer la partie.</h5>
-                    
+                    <!--premier niveau : 1 baton-->
                     <div id="rowA" class="row">
-                        <div class="small-1 small-offset-3 columns end">
-                            <img src="img/baton.png" alt="baton 10">
+                        <div id="b0"  class="small-1 small-offset-3 columns end">
+                            <img src="img/baton.png" alt="baton 0">
                         </div>
                     </div>
+                    <!--niveau 2 : 3 batons-->
                     <div id="rowB" class="row">
                         <div class="small-1 small-offset-2 columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img  id="b1" src="img/baton.png" alt="baton 1">
                         </div>
                         <div class="small-1 columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b2" src="img/baton.png" alt="baton 2">
                         </div>
                         <div class="small-1 columns end">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b3" src="img/baton.png" alt="baton 3">
                         </div>
                     </div>
+                    <!--niveau 3 : 5 batons-->
                     <div id="rowC" class="row">
                         <div class="small-1 small-offset-1 columns">
-                           <img src="img/baton.png" alt="baton 10">
+                           <img id="b4" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1 columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b5" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1 columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b6" src="img/baton.png" alt="baton 10">
                         </div>
                            <div class="small-1 columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b7" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1 columns end">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b8" src="img/baton.png" alt="baton 10">
                         </div>
                     </div>
+                    <!--niveau 4 : 7 batons-->
                     <div id="rowD" class="row">
                         <div class="small-1  columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b9" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1  columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b10" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1  columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b11" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1  columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b12" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1  columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b13" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1  columns">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b14" src="img/baton.png" alt="baton 10">
                         </div>
                         <div class="small-1  columns end">
-                            <img src="img/baton.png" alt="baton 10">
+                            <img id="b15" src="img/baton.png" alt="baton 10">
                         </div>
                     </div>
                 </div>
                 
             
      </section>
-    <div class="row">
-      <div class="small-2 medium-2 columns">
-        <h5>Voici la Grille de jeu</h5>
-        <!-- Grid Example -->
-            
 
-
-
-        <hr />
-
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <div class="input-group">
-                <input type="text" placeholder="small-9.columns" class="input-group-field" />
-                <span class="input-group-label">.com</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="medium success button">Success Button</a><br/>
-        <a href="#" class="medium alert button">Alert Button</a><br/>
-        <a href="#" class="medium secondary button">Secondary Button</a></p>
-        <div class="callout">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>
-        </div>
-      </div>
-    </div>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
