@@ -9,3 +9,13 @@
             width: 100px;
             margin: 10px;
             background-color: dimgray;
+#rowA #rowB #rowC #rowD {
+        background-color: aqua;
+    }
+img {
+        width: 20px;
+        height: auto;
+    }
+.row{
+    width: 100px;        
+    }

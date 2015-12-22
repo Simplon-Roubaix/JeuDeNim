@@ -6,7 +6,7 @@ var clicCommencer = document.getElementById("commencer");
 
 // 2 : les fonctions
 var onClicButt = function(){
-    cibleEl.textContent = "Je m'affiche ici";
+    //cibleEl.textContent = "Je m'affiche ici";
     
 }
 
