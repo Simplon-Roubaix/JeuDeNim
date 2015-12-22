@@ -6,8 +6,7 @@ var partie = 0 ;
 // 1 : recuperation des elements du DOM
 var cibleEl = document.getElementById("cible");
 var clicCommencer = document.getElementById("commencer");
-var b0El = document.getElementById("b0");
-var b1El = document.getElementById("b1");
+alert(partie);
 
 // 2 : les fonctions
 var onImgClic = function (n) {
@@ -19,18 +18,27 @@ var onImgClic = function (n) {
         b1El.src = "img/allumette-brulee.png";
         }
     }
+// fonction pour changer l'objet choisi
+function choisie(event) {
+     
+        //this.style.backgroundColor = 'black';
+        this.src = "img/allumette-brulee.png";
     
+}
 
-var onClicButt = function(){
+function jeuDeNim(){
     
-   partie = 1;
-clicCommencer.removeEventListener
+    partie = 1;
+    alert(partie);
+    document.getElementById("b0").onclick = choisie;
     
 }
 
 // 3 : addEvent
-clicCommencer.addEventListener("click",onClicButt); 
+clicCommencer.addEventListener("click",jeuDeNim); 
 
-b0El.addEventListener("click",onImgClic(0));
-b0El.addEventListener("click",onImgClic(1));
+
+    
+
+
 
