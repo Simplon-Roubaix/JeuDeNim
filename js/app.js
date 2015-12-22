@@ -9,7 +9,8 @@ var clicCommencer = document.getElementById("commencer");
 // Boutons ??
 var clic1Button = document.getElementById("clic1");
 var clic2Button = document.getElementById("clic2");
-alert(partie);
+var rJeuEl = document.getElementById("rJeu");
+
 
 // 2 : les fonctions
 // fonction pour changer l'objet choisi
@@ -17,7 +18,7 @@ function jeuDeNim(event) {
     
     //Quel est le joueur?
     partie --;
-    while (partie > 1) {
+    if (partie > 1) {
         //Allumette utilisée 
         this.src = "img/allumette-brulee.png";
         if (n===1) {
@@ -27,10 +28,14 @@ function jeuDeNim(event) {
                     clic1Button.textContent = name1;
             }
             // 3 choix:
-            do {
-
-                compte--;
-            } while (compte<=1 || true)
+            compte--;
+            console.log(compte);
+            if (compte===0) {
+                n=2;
+                compte=3;
+                clic1Button.className = "mute";
+                clic2Button.className = "active";
+            }
         } 
         
         
@@ -40,12 +45,22 @@ function jeuDeNim(event) {
                     name2 =  prompt("Veuillez entrer votre prénom Joueur2?");
                     clic2Button.textContent = name2;
             }
-            //
+            // 3 choix:
+            compte--;
+            console.log(compte);
+            if (compte===0) {
+                n=1;
+                compte=3;
+                clic1Button.className = "active";
+                clic2Button.className = "mute";
+            }
         }
     
     //this.style.backgroundColor = 'black';
     }
-    document.getElementById(rJeu).innerHTML = "Vous avez perdu!";
+    else {
+        rJeuEl.innerHTML = "Vous avez perdu!";
+    }
 }
 
 
