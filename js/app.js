@@ -16,11 +16,13 @@ var rJeuEl = document.getElementById("rJeu");
 // fonction pour changer l'objet choisi
 function jeuDeNim(event) {
     
-    //Quel est le joueur?
+    //Partie toujours en cours?
     partie --;
+    console.log("Joueur : "+n);
     if (partie > 0) {
         //Allumette utilisée 
         this.src = "img/allumette-brulee.png";
+        this.id = partie;
         //Quel est le joueur?
         if (n===1) {
             //demander le nom du premier joueur
@@ -32,10 +34,7 @@ function jeuDeNim(event) {
             compte--;
             console.log(compte);
             if (compte===0) {
-                n=2;
-                compte=3;
-                clic1Button.className = "mute";
-                clic2Button.className = "active";
+                changeJoueur();
             }
         } 
         
@@ -50,10 +49,7 @@ function jeuDeNim(event) {
             compte--;
             console.log(compte);
             if (compte===0) {
-                n=1;
-                compte=3;
-                clic1Button.className = "active";
-                clic2Button.className = "mute";
+               changeJoueur();
             }
         }
     
@@ -64,7 +60,25 @@ function jeuDeNim(event) {
     }
 }
 
-
+function changeJoueur() {
+     // fonction pour basculer d'utilisateur 
+    console.log("Joueur : "+n);
+    compte=3;
+    if (n===2) {
+         n=1;
+         clic1Button.className = "active";
+         clic1Button.className += " button";
+         clic2Button.className = "mute";
+         clic2Button.className += " button";
+    }
+    else {
+        n=2;
+        clic1Button.className = "mute";
+        clic1Button.className += " button";
+        clic2Button.className = "active";
+        clic2Button.className += " button";  
+    }
+}
 
 
 function onclickCommencer(){
@@ -86,8 +100,10 @@ function onclickCommencer(){
     document.getElementById("b13").onclick = jeuDeNim;
     document.getElementById("b14").onclick = jeuDeNim;
     document.getElementById("b15").onclick = jeuDeNim;
-    document.getElementById("clic1Button").onclick = jeuDeNim;
-    document.getElementById("clic2Button").onclick = jeuDeNim;
+    // on passe la amin avant de jouer trois fois
+    /*document.getElementById("clic1Button").onclick = changeJoueur;*/
+    clic1Button.onclick = changeJoueur;
+    clic2Button.onclick = changeJoueur;
 }
 
 // 3 : addEvent
