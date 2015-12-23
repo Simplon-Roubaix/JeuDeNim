@@ -6,10 +6,11 @@ var partie = 0, name1,name2,n=1,compte=3;
 // 1 : recuperation des elements du DOM
 var cibleEl = document.getElementById("cible");
 var clicCommencer = document.getElementById("commencer");
-// Boutons ??
+// Boutons utilisés pour passer son tour
 var clic1Button = document.getElementById("clic1");
 var clic2Button = document.getElementById("clic2");
 var rJeuEl = document.getElementById("rJeu");
+var messEl = document.getElementById("texte");
 
 
 // 2 : les fonctions
@@ -69,11 +70,13 @@ function changeJoueur() {
          clic1Button.className = "active";
          clic1Button.className += " button";
          clic2Button.className = "mute";
+         clic2Button.className += " small";
          clic2Button.className += " button";
     }
     else {
         n=2;
         clic1Button.className = "mute";
+        clic1Button.className += " small";
         clic1Button.className += " button";
         clic2Button.className = "active";
         clic2Button.className += " button";  
@@ -82,8 +85,10 @@ function changeJoueur() {
 
 
 function onclickCommencer(){
+    messEl.textContent = "A vous de jouer..";
     partie = 16;
     console.log(partie);
+    // On detecte les clics sur les batons
     document.getElementById("b0").onclick = jeuDeNim;
     document.getElementById("b1").onclick = jeuDeNim;
     document.getElementById("b2").onclick = jeuDeNim;
@@ -100,13 +105,12 @@ function onclickCommencer(){
     document.getElementById("b13").onclick = jeuDeNim;
     document.getElementById("b14").onclick = jeuDeNim;
     document.getElementById("b15").onclick = jeuDeNim;
-    // on passe la amin avant de jouer trois fois
-    /*document.getElementById("clic1Button").onclick = changeJoueur;*/
+    // on passe la main avant trois sélections
     clic1Button.onclick = changeJoueur;
     clic2Button.onclick = changeJoueur;
 }
 
-// 3 : addEvent
+// 3 : addEvent - Demarrer le jeu
 clicCommencer.addEventListener("click",onclickCommencer); 
 
 

@@ -10,7 +10,7 @@
   </head>
   <body>
     <section id="jeudenim">
-            <div class="expanded columns row">
+            <div class="expanded columns row text-center">
               
                 <h1><img src="img/baton.png" alt=""> Jeu de Nim
               <img src="img/baton.png" alt=""></h1>
@@ -18,35 +18,30 @@
 
             <div class="row">
              
-                <div id="commandes" class="small-4  columns">
+                <div id="commandes" class="small-12 medium-8 columns">
+                   <hr>
                     <div id="commencer" class="expanded warning button">Commencer</div>
-                    
-                    
+                    <hr>
+                    <ul class="inline-list">
+                        <li id="clic1" class="button active ">Joueur 1</li>
+                        <li id="clic2" class="button mute ">Joueur 2</li>
+                    </ul>
+
                    <!-- <img src="img/nim___01.jpg" alt="">-->
-                    <div id="rJeu" class="success callout">
-                        <h3>Les règles du jeu</h3>
-                        <p>A tour de rôle, chaque joueur peut choisir de un à trois baton(s). Le but, ne soyez pas celui qui restera avec le dernier baton !! </p>
-                        <p>Cliquez sur le baton de votre choix pour le sélectionner. Bien sur, le baton doit être disponible.</p>
-                        <p>Entrer <kbd>X</kbd> pour passer la main au second joueur. Un choix minimum.</p>
-                    </div>
+                
                 </div>
-                <div id="cible" class="small-7 medium-7 columns">
-                    <h5>Cliquez sur commencer pour démarrer la partie.</h5>
+
+                <div id="cible" class="small-12 medium-7 large-12 columns">
+                    <h5 id="texte">Cliquez sur commencer pour démarrer la partie.</h5>
                     <!--le tableau de jeu-->
                     <!--premier niveau : 1 baton-->
-                    <div id="rowA" class="row">
-                       <div class="small-2  columns">
-                           <span id="clic1" class="button active ">Joueur 1</span>
-                       </div>
-                        <div class="small-1  small-offset-1 columns">
+                    <div id="rowA" class=" row">
+                        <div class="small-1  small-offset-3 columns end">
                             <img id="b0" src="img/baton.png" alt="baton 0">
-                        </div>
-                        <div class="small-2  small-offset-1 columns end">
-                            <span id="clic2" class="button mute ">Joueur 2</span>
                         </div>
                     </div>
                     <!--niveau 2 : 3 batons-->
-                    <div id="rowB" class="row">
+                    <div id="rowB" class=" row">
                         <div class="small-1 small-offset-2 columns">
                             <img  id="b1" src="img/baton.png" alt="baton 1">
                         </div>
@@ -99,10 +94,16 @@
                             <img id="b15" src="img/baton.png" alt="baton 10">
                         </div>
                     </div>
-                </div>
-                
-            
+                 </div>                
+            </div>  
+    </section>                              
+    <section id="rJeu" class="success callout show-for-large-only">
+                <h3>Les règles du jeu</h3>
+                <p>A tour de rôle, chaque joueur peut choisir de un à trois baton(s). Objectif ? Ne soyez pas celui qui restera avec le dernier baton !! </p>
+                <p>Cliquez sur le baton de votre choix pour le sélectionner. Bien sur, le baton doit être disponible.</p>
+                <p>Cliquez sur les boutons de joueurs pour passer la main à votre adversaire.</p>
      </section>
+
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/what-input.min.js"></script>

@@ -1,3 +1,6 @@
+.tabJeu{
+    @include grid-column(1 of 3);
+}
 .active{
             height: 50px;
             width: 100px;
@@ -11,13 +14,7 @@
             margin: 10px;
             background-color: dimgray;
             color: yellow;
-#rowA #rowB #rowC #rowD {
-        background-color: aqua;
-    }
 img {
         width: 20px;
         height: auto;
-    }
-.row{
-    width: 100px;        
     }
