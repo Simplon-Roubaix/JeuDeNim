@@ -16,12 +16,12 @@ var messEl = document.getElementById("texte");
 // 2 : les fonctions
 // fonction pour changer l'objet choisi
 function jeuDeNim(event) {
-    
+
     //Partie toujours en cours?
     partie --;
     console.log("Joueur : "+n);
     if (partie > 0) {
-        //Allumette utilisée 
+        //Allumette utilisée
         this.src = "img/allumette-brulee.png";
         this.id = partie;
         //Quel est le joueur?
@@ -37,9 +37,9 @@ function jeuDeNim(event) {
             if (compte===0) {
                 changeJoueur();
             }
-        } 
-        
-        
+        }
+
+
         else {
             //demander le nom du second joueur
             if (!name2) {
@@ -53,39 +53,43 @@ function jeuDeNim(event) {
                changeJoueur();
             }
         }
-    
+
     //this.style.backgroundColor = 'black';
     }
     else {
-        rJeuEl.textContent = "Vous avez perdu " +n; 
+        rJeuEl.textContent = "Vous avez perdu " +n;
     }
 }
 
 function changeJoueur() {
-     // fonction pour basculer d'utilisateur 
+     // fonction pour basculer d'utilisateur
     console.log("Joueur : "+n);
-    compte=3;
-    if (n===2) {
-         n=1;
-         clic1Button.className = "active";
-         clic1Button.className += " button";
-         clic2Button.className = "mute";
-         clic2Button.className += " small";
-         clic2Button.className += " button";
+    if (compte !== 3 ) {
+        compte=3;
+        if (n===2) {
+             n=1;
+             clic1Button.className = "active";
+             clic1Button.className += " button";
+             clic2Button.className = "mute";
+             clic2Button.className += " small";
+             clic2Button.className += " button";
+        }
+        else {
+            n=2;
+            clic1Button.className = "mute";
+            clic1Button.className += " small";
+            clic1Button.className += " button";
+            clic2Button.className = "active";
+            clic2Button.className += " button";
+        }
+        messEl.textContent = "A votre tour joueur "+ n;
     }
-    else {
-        n=2;
-        clic1Button.className = "mute";
-        clic1Button.className += " small";
-        clic1Button.className += " button";
-        clic2Button.className = "active";
-        clic2Button.className += " button";  
-    }
+    else messEl.textContent = "Vous devez faire un choix minimum joueur "+ n;
 }
 
 
 function onclickCommencer(){
-    messEl.textContent = "A vous de jouer..";
+    messEl.textContent = "A vous de débuter joueur "+ n;
     partie = 16;
     console.log(partie);
     // On detecte les clics sur les batons
@@ -111,10 +115,4 @@ function onclickCommencer(){
 }
 
 // 3 : addEvent - Demarrer le jeu
-clicCommencer.addEventListener("click",onclickCommencer); 
-
-
-    
-
-
-
+clicCommencer.addEventListener("click",onclickCommencer);
