@@ -23,6 +23,7 @@ function jeuDeNim(event) {
     if (partie > 0) {
         //Allumette utilisée
         this.src = "img/allumette-brulee.png";
+        this.alt = "Baton deja utilisé";
         this.id = partie;
         //Quel est le joueur?
         if (n===1) {
@@ -57,7 +58,7 @@ function jeuDeNim(event) {
     //this.style.backgroundColor = 'black';
     }
     else {
-        rJeuEl.textContent = "Vous avez perdu " +n;
+        messEl.textContent = "Vous avez perdu Joueur " +n;
     }
 }
 
