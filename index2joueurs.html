@@ -7,6 +7,7 @@
     <meta name="description" content="Un jeu de Nim ou de batonnets réalisé en pur JS.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
@@ -22,14 +23,14 @@
 
                 <div id="commandes" class="small-12 medium-4 large-4 columns">
                    <hr>
-                    <div id="commencer" class="expanded warning button">Commencer</div>
+                    <div id="commencer" class="expanded warning button large">Commencer</div>
                     <hr>
 
                     <ul class="inline-list">
-                        <li id="clic1" class="button active ">Joueur 1</li>
-                        <li id="clic2" class="button mute ">Joueur 2</li>
+                        <li id="clic1" class="button active large">Joueur 1</li>
+                        <li id="clic2" class="button mute large">Joueur 2</li>
                     </ul>
-                    <h5 id="texte">Cliquez sur commencer pour démarrer la partie.</h5>
+                    <h4 id="texte">Cliquez sur commencer pour démarrer la partie.</h4>
                    <!-- <img src="img/nim___01.jpg" alt="">-->
 
                 </div>
@@ -39,69 +40,69 @@
                     <!--le tableau de jeu-->
                     <!--premier niveau : 1 baton-->
                     <div id="rowA" class=" row">
-                        <div class="small-1  small-offset-5 columns end">
+                        <div class="small-1  small-offset-5 columns end baton">
                             <img id="b0" src="img/baton.png" alt="baton 0">
                         </div>
                     </div>
                     <!--niveau 2 : 3 batons-->
                     <div id="rowB" class=" row">
-                        <div class="small-1 small-offset-4 columns">
+                        <div class="small-1 small-offset-4 columns baton">
                             <img  id="b1" src="img/baton.png" alt="baton 1">
                         </div>
-                        <div class="small-1 columns">
+                        <div class="small-1 columns baton">
                             <img id="b2" src="img/baton.png" alt="baton 2">
                         </div>
-                        <div class="small-1 columns end">
+                        <div class="small-1 columns end baton">
                             <img id="b3" src="img/baton.png" alt="baton 3">
                         </div>
                     </div>
                     <!--niveau 3 : 5 batons-->
                     <div id="rowC" class="row">
-                        <div class="small-1 small-offset-3 columns">
+                        <div class="small-1 small-offset-3 columns baton">
                            <img id="b4" src="img/baton.png" alt="baton 4">
                         </div>
-                        <div class="small-1 columns">
+                        <div class="small-1 columns baton">
                             <img id="b5" src="img/baton.png" alt="baton 5">
                         </div>
-                        <div class="small-1 columns">
+                        <div class="small-1 columns baton">
                             <img id="b6" src="img/baton.png" alt="baton 6">
                         </div>
-                           <div class="small-1 columns">
+                           <div class="small-1 columns baton">
                             <img id="b7" src="img/baton.png" alt="baton 7">
                         </div>
-                        <div class="small-1 columns end">
+                        <div class="small-1 columns end baton">
                             <img id="b8" src="img/baton.png" alt="baton 8">
                         </div>
                     </div>
                     <!--niveau 4 : 7 batons-->
                     <div id="rowD" class="row">
-                        <div class="small-1 small-offset-2 columns">
+                        <div class="small-1 small-offset-2 columns baton">
                             <img id="b9" src="img/baton.png" alt="baton 9">
                         </div>
-                        <div class="small-1  columns">
+                        <div class="small-1  columns baton">
                             <img id="b10" src="img/baton.png" alt="baton 10">
                         </div>
-                        <div class="small-1  columns">
+                        <div class="small-1  columns baton">
                             <img id="b11" src="img/baton.png" alt="baton 11">
                         </div>
-                        <div class="small-1  columns">
+                        <div class="small-1  columns baton">
                             <img id="b12" src="img/baton.png" alt="baton 12">
                         </div>
-                        <div class="small-1  columns">
+                        <div class="small-1  columns baton">
                             <img id="b13" src="img/baton.png" alt="baton 13">
                         </div>
-                        <div class="small-1  columns">
+                        <div class="small-1  columns baton">
                             <img id="b14" src="img/baton.png" alt="baton 14">
                         </div>
-                        <div class="small-1  columns end">
+                        <div class="small-1  columns end baton">
                             <img id="b15" src="img/baton.png" alt="baton 15">
                         </div>
                     </div>
                  </div>
             </div>
     </section>
-    <section id="rJeu" class="success callout show-for-large-up">
-                <h3>Les règles du jeu</h3>
+    <section id="rJeu" class=" success callout show-for-large-up">
+                <h3>Les règles du jeu :</h3>
                 <ul >
                   <li>A tour de rôle, chaque joueur peut choisir de un à trois baton(s).</li>
                   <li>Objectif ? Ne soyez pas celui qui restera avec le dernier baton !!</li>
