@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
@@ -19,13 +20,34 @@
               <hr>
               <!-- mise en place des choix optionnels -->
               <!-- choix Joueur 1 -->
-
+              <form id="Jeu-form">
+                     <label>
+                        <i class="fa fa-user fa-4x"></i><br>
+                         <div class="large-6 columns">
+                            <label>Qui sera le joueur 1</label>
+                            <input type="radio" name="joueur1" value="Joueur1" id="joueur1"><label for="pokemonRed">Joueur</label>
+                            <input type="radio" name="joueur1" value="Ordi1" id="ordi1"><label for="pokemonBlue">Ordinateur</label>
+                          </div>
+                        <input type="text" placeholder="Entrez votre prénom joueur 1" />
+                     </label> <br>
+                     <label>
+                        <i class="fa fa-user fa-4x"></i><i class="fa fa-user fa-4x"></i><br>
+                         <div class="large-6 columns">
+                            <label>Qui sera le joueur 2</label>
+                            <input type="radio" name="joueur2" value="Joueur2" id="joueur2"><label for="pokemonRed">Joueur</label>
+                            <input type="radio" name="joueur2" value="Ordi2" id="ordi2"><label for="pokemonBlue">Ordinateur</label>
+                          </div>
+                        <input type="text" placeholder="Entrez votre prénom joueur 2" />
+                     </label> <br>
+                     <button type="submit" class="expanded warning button large">Commencer</button>
+              </form>
               <!-- choix Joueur 2 -->
 
               <!-- fin mise en place des choix optionnels -->
               <a href="./index2joueurs.html">Lien vers la page deux joueurs</a>
           </div>
           <div class="small-12 medium-6 columns center callout">
+            <!-- Ici s'affichera le jeu -->
               <img class="hide-for-small-only" src="./img/nim___01.jpg" alt="Pyramide d'allumettes">
           </div>
      </section>
