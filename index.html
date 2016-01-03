@@ -22,49 +22,107 @@
           </div>
       </div>
       <div class="row">
-          <div id="main" class="small-12 small-6 large-6 columns">
+          <div id="main" class="small-12 medium-5 columns">
               <!-- mise en place des choix optionnels -->
               <!-- choix Joueur 1 -->
               <form id="Jeu-form">
                   <div class="row">
                       <div class="small-6 columns">
-                           <!-- <label> -->
-                              <!-- <i class="fa fa-user fa-4x"></i>-->
                               <hr class="star-light">
                               <label>Premier joueur?
                                   <select id="j1">
                                       <option value="Joueur1">Joueur 1</option>
-                                      <option value="Ordinateur1">Ordinateur</option>
+                                      <option value="Ordinateur">Ordinateur</option>
                                   </select>
                               </label>
 
                                <input id="nomJ1" type="text" placeholder="Entrez votre prénom joueur 1" />
-                           <!-- </label> <br> -->
                       </div>
+                      <!-- choix Joueur 2 -->
                       <div class="small-6 columns">
-                             <!-- <label> -->
-                                <!-- <i class="fa fa-user fa-4x"></i><i class="fa fa-user fa-4x"></i><br> -->
                                 <hr class="star2-light">
                                 <label>Second joueur?
                                     <select id="j2">
                                         <option value="Joueur2">Joueur 2</option>
-                                        <option value="Ordinateur2">Ordinateur</option>
+                                        <option value="Ordinateur">Ordinateur</option>
                                     </select>
                                 </label>
                                 <input id="nomJ2" type="text" placeholder="Ordinateur" />
-                             <!-- </label> <br> -->
                       </div>
                   </div>
               <h3 id="texte">Cliquez sur commencer pour démarrer la partie.</h3>
               </form>
-              <!-- choix Joueur 2 -->
               <!-- fin mise en place des choix optionnels -->
               <a href="./index2joueurs.html">Lien vers la page deux joueurs</a>
           </div>
-          <div id="cible" class="small-12 medium-6 columns center callout">
-            <!-- Ici s'affichera le jeu -->
-              <img class="hide-for-small-only" src="./img/nim___01.jpg" alt="Pyramide d'allumettes">
-          </div>
+
+          <div id="cible" class="small-12 medium-7 medium-offset-1 large-7 columns callout">
+
+              <!--le tableau de jeu-->
+              <!--premier niveau : 1 baton-->
+              <div id="rowA" class=" row">
+                  <div class="small-1  small-offset-5 columns end baton">
+                      <img id="b0" src="" alt="baton 0">
+                  </div>
+              </div>
+              <!--niveau 2 : 3 batons-->
+              <div id="rowB" class=" row">
+                  <div class="small-1 small-offset-4 columns baton">
+                      <img  id="b1" src="" alt="baton 1">
+                  </div>
+                  <div class="small-1 columns baton">
+                      <img id="b2" src="" alt="baton 2">
+                  </div>
+                  <div class="small-1 columns end baton">
+                      <img id="b3" src="" alt="baton 3">
+                  </div>
+              </div>
+              <!--niveau 3 : 5 batons-->
+              <div id="rowC" class="row">
+                  <div class="small-1 small-offset-3 columns baton">
+                     <img id="b4" src="" alt="baton 4">
+                  </div>
+                  <div class="small-1 columns baton">
+                      <img id="b5" src="" alt="baton 5">
+                  </div>
+                  <div class="small-1 columns baton">
+                      <img id="b6" src="" alt="baton 6">
+                  </div>
+                     <div class="small-1 columns baton">
+                      <img id="b7" src="" alt="baton 7">
+                  </div>
+                  <div class="small-1 columns end baton">
+                      <img id="b8" src="" alt="baton 8">
+                  </div>
+              </div>
+              <!--niveau 4 : 7 batons-->
+              <div id="rowD" class="row">
+                  <div class="small-1 small-offset-2 columns baton">
+                      <img id="b9" src="" alt="baton 9">
+                  </div>
+                  <div class="small-1  columns baton">
+                      <img id="b10" src="" alt="baton 10">
+                  </div>
+                  <div class="small-1  columns baton">
+                      <img id="b11" src="" alt="baton 11">
+                  </div>
+                  <div class="small-1  columns baton">
+                      <img id="b12" src="" alt="baton 12">
+                  </div>
+                  <div class="small-1  columns baton">
+                      <img id="b13" src="" alt="baton 13">
+                  </div>
+                  <div class="small-1  columns baton">
+                      <img id="b14" src="" alt="baton 14">
+                  </div>
+                  <div class="small-1  columns end baton">
+                      <img id="b15" src="" alt="baton 15">
+                  </div>
+              </div>
+           </div>
+
+
+
       </div>
     </section>
 

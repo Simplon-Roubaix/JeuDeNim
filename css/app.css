@@ -20,7 +20,7 @@ h3, h4{
   background-color: rgb(107, 255, 166);
       }
 /*Definir le style pour les boutons Actif ou passif*/
-.active{ height: 50px; width: 140px; margin: 10px; background-color: greenyellow; color: black; }
+.active{ height: auto; width: auto; margin: 10px; background-color: lightpink; color: black; }
 .mute{ height: 50px; width: 140px; margin: 10px; background-color: rgb(153, 160, 161); color: yellow; }
 /*Une ou deux etoiles pour identifier le joueur*/
 hr{ margin: 2em;}
