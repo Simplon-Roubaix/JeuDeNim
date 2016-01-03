@@ -6,9 +6,8 @@ var partie = 0, name1,name2,n=1,compte=3;
 // 1 : recuperation des elements du DOM
 var cibleEl = document.getElementById("cible");
 var clicCommencer = document.getElementById("commencer");
-// Boutons utilisés pour passer son tour
-var clic1Button = document.getElementById("clic1");
-var clic2Button = document.getElementById("clic2");
+
+
 var rJeuEl = document.getElementById("rJeu");
 var messEl = document.getElementById("texte");
 
@@ -89,30 +88,37 @@ function changeJoueur() {
 }
 
 
+// On recupere les informations sur les joueurs
 function onclickCommencer(){
-    messEl.textContent = "A vous de débuter joueur "+ n;
+  // champs nom de joueur
+  name1 = document.getElementById("nomJ1").value;
+console.log("--" + name1 + "--");
+  name2 = document.getElementById("nomJ2").value;
+console.log("--" + name2 + "--");
+// choix du type de joueur et qui jouera 1er
+ var joueur1 = document.getElementById("j1").value;
+ while (joueur1 === "Joueur1" && !name1) {
+   messEl.textContent = "Veuillez saisir votre prénom joueur1 ";
+   messEl.className += " active";
+   return;
+ }
+ var joueur2 = document.getElementById("j2").value;
+ while (joueur2 === "Joueur2" && !name2) {
+   messEl.textContent = "Veuillez saisir votre prénom joueur2";
+   return;
+ }
+ messEl.textContent = "Veuillez choisir de 1 à 3 batons " + name1;
+ messEl.textContent += " Vous affrontez " + name2;
+
+// console.log(name2);
+    // messEl.textContent = "A vous de débuter "+ name1;
+    // messEl.textContent += " Ensuite "+ name2;
     partie = 16;
+
     console.log(partie);
     // On detecte les clics sur les batons
-    document.getElementById("b0").onclick = jeuDeNim;
-    document.getElementById("b1").onclick = jeuDeNim;
-    document.getElementById("b2").onclick = jeuDeNim;
-    document.getElementById("b3").onclick = jeuDeNim;
-    document.getElementById("b4").onclick = jeuDeNim;
-    document.getElementById("b5").onclick = jeuDeNim;
-    document.getElementById("b6").onclick = jeuDeNim;
-    document.getElementById("b7").onclick = jeuDeNim;
-    document.getElementById("b8").onclick = jeuDeNim;
-    document.getElementById("b9").onclick = jeuDeNim;
-    document.getElementById("b10").onclick = jeuDeNim;
-    document.getElementById("b11").onclick = jeuDeNim;
-    document.getElementById("b12").onclick = jeuDeNim;
-    document.getElementById("b13").onclick = jeuDeNim;
-    document.getElementById("b14").onclick = jeuDeNim;
-    document.getElementById("b15").onclick = jeuDeNim;
-    // on passe la main avant trois sélections
-    clic1Button.onclick = changeJoueur;
-    clic2Button.onclick = changeJoueur;
+    // document.getElementById("b0").onclick = jeuDeNim;
+
 }
 
 // 3 : addEvent - Demarrer le jeu

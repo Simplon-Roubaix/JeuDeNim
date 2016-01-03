@@ -15,42 +15,58 @@
   <body>
     <section id="jeudenim">
       <div class="row">
-          <div id="main" class="small-12 medium-6 large-6 columns">
+          <div class="expanded columns row text-center">
               <h1 id="Titre">Jeu De NIM</h1>
               <hr>
+                <button id="commencer" type="submit" class="expanded warning button large">Commencer</button>
+          </div>
+      </div>
+      <div class="row">
+          <div id="main" class="small-12 small-6 large-6 columns">
               <!-- mise en place des choix optionnels -->
               <!-- choix Joueur 1 -->
               <form id="Jeu-form">
-                     <label>
-                        <i class="fa fa-user fa-4x"></i><br>
-                         <div class="large-6 columns">
-                            <label>Qui sera le joueur 1</label>
-                            <input type="radio" name="joueur1" value="Joueur1" id="joueur1"><label for="pokemonRed">Joueur</label>
-                            <input type="radio" name="joueur1" value="Ordi1" id="ordi1"><label for="pokemonBlue">Ordinateur</label>
-                          </div>
-                        <input type="text" placeholder="Entrez votre prénom joueur 1" />
-                     </label> <br>
-                     <label>
-                        <i class="fa fa-user fa-4x"></i><i class="fa fa-user fa-4x"></i><br>
-                         <div class="large-6 columns">
-                            <label>Qui sera le joueur 2</label>
-                            <input type="radio" name="joueur2" value="Joueur2" id="joueur2"><label for="pokemonRed">Joueur</label>
-                            <input type="radio" name="joueur2" value="Ordi2" id="ordi2"><label for="pokemonBlue">Ordinateur</label>
-                          </div>
-                        <input type="text" placeholder="Entrez votre prénom joueur 2" />
-                     </label> <br>
-                     <button type="submit" class="expanded warning button large">Commencer</button>
+                  <div class="row">
+                      <div class="small-6 columns">
+                           <!-- <label> -->
+                              <!-- <i class="fa fa-user fa-4x"></i>-->
+                              <hr class="star-light">
+                              <label>Premier joueur?
+                                  <select id="j1">
+                                      <option value="Joueur1">Joueur 1</option>
+                                      <option value="Ordinateur1">Ordinateur</option>
+                                  </select>
+                              </label>
+
+                               <input id="nomJ1" type="text" placeholder="Entrez votre prénom joueur 1" />
+                           <!-- </label> <br> -->
+                      </div>
+                      <div class="small-6 columns">
+                             <!-- <label> -->
+                                <!-- <i class="fa fa-user fa-4x"></i><i class="fa fa-user fa-4x"></i><br> -->
+                                <hr class="star2-light">
+                                <label>Second joueur?
+                                    <select id="j2">
+                                        <option value="Joueur2">Joueur 2</option>
+                                        <option value="Ordinateur2">Ordinateur</option>
+                                    </select>
+                                </label>
+                                <input id="nomJ2" type="text" placeholder="Ordinateur" />
+                             <!-- </label> <br> -->
+                      </div>
+                  </div>
+              <h3 id="texte">Cliquez sur commencer pour démarrer la partie.</h3>
               </form>
               <!-- choix Joueur 2 -->
-
               <!-- fin mise en place des choix optionnels -->
               <a href="./index2joueurs.html">Lien vers la page deux joueurs</a>
           </div>
-          <div class="small-12 medium-6 columns center callout">
+          <div id="cible" class="small-12 medium-6 columns center callout">
             <!-- Ici s'affichera le jeu -->
               <img class="hide-for-small-only" src="./img/nim___01.jpg" alt="Pyramide d'allumettes">
           </div>
-     </section>
+      </div>
+    </section>
 
 
     <script src="js/vendor/jquery.min.js"></script>
