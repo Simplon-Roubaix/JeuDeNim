@@ -21,8 +21,8 @@
                 <button id="commencer" type="submit" class="expanded warning button large">Commencer</button>
           </div>
       </div>
-      <div class="row">
-          <div id="main" class="small-12 medium-5 columns">
+      <div class="row ">
+          <div id="main" class="small-12 medium-5 columns centre">
               <!-- mise en place des choix optionnels -->
               <!-- choix Joueur 1 -->
               <form id="Jeu-form">
@@ -53,52 +53,53 @@
               <h3 id="texte">Cliquez sur commencer pour démarrer la partie.</h3>
               </form>
               <!-- fin mise en place des choix optionnels -->
-              <a href="./index2joueurs.html">Lien vers la page deux joueurs</a>
+              <a href="./index2joueurs.html"><i class="fa fa-exchange fa-2x"></i>
+Lien vers la page deux joueurs</a>
           </div>
 
-          <div id="cible" class="small-12 medium-7 medium-offset-1 large-7 columns callout">
+          <div id="cible" class="small-12 medium-7 medium-offset-1 large-7 columns callout centre">
 
               <!--le tableau de jeu-->
               <!--premier niveau : 1 baton-->
               <div id="rowA" class=" row">
                   <div class="small-1  small-offset-5 columns end baton">
-                      <img id="b0" src="" alt="baton 0">
+                      <img id="b00" src="" alt="baton 0" >
                   </div>
               </div>
               <!--niveau 2 : 3 batons-->
               <div id="rowB" class=" row">
                   <div class="small-1 small-offset-4 columns baton">
-                      <img  id="b1" src="" alt="baton 1">
+                      <img  id="b01" src="" alt="baton 1">
                   </div>
                   <div class="small-1 columns baton">
-                      <img id="b2" src="" alt="baton 2">
+                      <img id="b02" src="" alt="baton 2">
                   </div>
                   <div class="small-1 columns end baton">
-                      <img id="b3" src="" alt="baton 3">
+                      <img id="b03" src="" alt="baton 3">
                   </div>
               </div>
               <!--niveau 3 : 5 batons-->
               <div id="rowC" class="row">
                   <div class="small-1 small-offset-3 columns baton">
-                     <img id="b4" src="" alt="baton 4">
+                     <img id="b04" src="" alt="baton 4">
                   </div>
                   <div class="small-1 columns baton">
-                      <img id="b5" src="" alt="baton 5">
+                      <img id="b05" src="" alt="baton 5">
                   </div>
                   <div class="small-1 columns baton">
-                      <img id="b6" src="" alt="baton 6">
+                      <img id="b06" src="" alt="baton 6">
                   </div>
                      <div class="small-1 columns baton">
-                      <img id="b7" src="" alt="baton 7">
+                      <img id="b07" src="" alt="baton 7">
                   </div>
                   <div class="small-1 columns end baton">
-                      <img id="b8" src="" alt="baton 8">
+                      <img id="b08" src="" alt="baton 8">
                   </div>
               </div>
               <!--niveau 4 : 7 batons-->
               <div id="rowD" class="row">
                   <div class="small-1 small-offset-2 columns baton">
-                      <img id="b9" src="" alt="baton 9">
+                      <img id="b09" src="" alt="baton 9">
                   </div>
                   <div class="small-1  columns baton">
                       <img id="b10" src="" alt="baton 10">
@@ -124,12 +125,22 @@
 
 
       </div>
+      <section id="rJeu" class=" success callout show-for-large-up">
+                  <h3>Les règles du jeu :</h3>
+                  <ul >
+                    <li>A tour de rôle, chaque joueur peut choisir de un à trois baton(s).</li>
+                    <li>Objectif ? Ne soyez pas celui qui restera avec le dernier baton !!</li>
+                    <li>Cliquez sur le baton de votre choix pour le sélectionner. Bien sur, le baton doit être disponible.</li>
+                    <li>Cliquez sur les boutons de joueurs pour passer la main à votre adversaire.</li>
+                  </ul>
+       </section>
     </section>
 
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script src="js/appjoueur.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
